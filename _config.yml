@@ -76,7 +76,8 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://twitter.com/GraniteDan/photo
+avatar: https://media.licdn.com/dms/image/C4E03AQHdbi48Vb1ZBw/profile-displayphoto-shrink_800_800/0/1573049513885?e=1694044800&v=beta&t=P3Z1NJzJHsYu65DJhkKcWS-1_EL4elMrB8ounxKmUWE
+
 
 # boolean type, the global switch for TOC in posts.
 toc: true

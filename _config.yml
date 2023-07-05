@@ -26,7 +26,7 @@ description: >- # used by seo meta and the atom feed
   Practical Problem Solving Solutions for Network and Cyber Security
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
-url: ""
+url: "https://www.granite-it.net"
 
 github:
   username: GraniteDan # change to your github username
@@ -76,7 +76,7 @@ theme_mode: # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://twitter.com/GraniteDan/photo
+avatar:
 
 # boolean type, the global switch for TOC in posts.
 toc: true

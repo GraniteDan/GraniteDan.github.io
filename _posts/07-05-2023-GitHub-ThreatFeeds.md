@@ -1,7 +1,7 @@
 ---
 title: FortiGate Threat Feeds Hosted in a Private GitHub Repo
 date: 2023-07-05 19:30:00 -400
-categories: [github,fortinet,cybersecurity,incident response]
+categories: [github,fortinet,cybersecurity,IR]
 tags: [threatfeeds,fortigate,IR] 
 ---
 

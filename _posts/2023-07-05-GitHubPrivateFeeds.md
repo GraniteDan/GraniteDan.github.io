@@ -75,16 +75,12 @@ Set the resource equal to the URL of the raw data file in your private GitHub re
 
 ```console
 config system external-resource
-
-edit "Malicious_Domains"
-
-set type=domain
-
-set resource = "https://raw.githubusercontent.com/GitHubAcct/ThreatFeeds/main/Domains.txt"
-
-set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdfasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
-
-End
+    edit "Malicious_Domains"
+        set type=domain
+        set resource = "https://raw.githubusercontent.com/GitHubAcct/ThreatFeeds/main/Domains.txt"
+        set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdfasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
+    next
+end
 ```
 
 I hope to put together a quick tutorial video and adding it to my [YouTube Channel](https://youtube.com/granitedan) soon.  Once this is done I will add a link here as well.

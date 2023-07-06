@@ -4,7 +4,8 @@ date: 2023-07-05 19:30:00 -400
 categories: [github,fortinet,cybersecurity,IR]
 tags: [threatfeeds,fortigate,IR] 
 ---
-
+	![GitHub Feeds](./img/GithubFeed.jpg)
+    
 # Hosting Fortigate Threat Feed Data in a Private GitHub Repo
 
 Fortigate firewalls allow for the configuration of external threat feeds.  These are very usefull in some instances.  I created a Youtube video on this topic a while back.  If you are not yet familiar with this functionality you can visit the video here:

@@ -71,7 +71,7 @@ end
 ```
 Set the resource equal to the URL of the raw data file in your private GitHub repository. The "Authorization" header can be appended to the user-agent string using \r\n between them as follows
 
-```Console
+```console
 config system external-resource
 
 edit "Malicious_Domains"

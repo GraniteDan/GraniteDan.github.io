@@ -13,6 +13,8 @@ Fortigate firewalls allow for the configuration of external threat feeds.  These
 
 [Configure and use 3rd Party threat feeds on a Fortigate Firewall](https://youtu.be/CarI6_URN90)
 
+{% include embed/youtube.html id='CarI6_URN90' %}
+
 In the video mentioned above I referenced a use case, where one may choose to build some custom threat feeds for their organization.  These could be used during incident response scenarios.
 
 During an incident response you may come across various indicators of compromise, or indicators of attack.  These can be IP addresses, Malware hashes, domain names that could be attributed to data exfiltration or command & control activity, or malicious URLs.  The Fortigate NGFW platform has the ability to ingest threat feed data for each of these types.  Typically these are downloaded by the Fortigate from a web service as a text file (http, https, and STIX protocols are supported).  Feed data may also be updated by Push API updates to the Fortigate REST API (*Topic for a Future Post*).

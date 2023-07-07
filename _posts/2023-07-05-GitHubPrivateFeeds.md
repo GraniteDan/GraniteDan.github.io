@@ -89,7 +89,7 @@ The documentation stated that the default user-agent string is `curl/7.58.0`
 
 If the PAT generated is equal to `github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK` you would set the user-agent to:
 ```
-set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
+"set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
 ```
 
 **Sample Configuration**

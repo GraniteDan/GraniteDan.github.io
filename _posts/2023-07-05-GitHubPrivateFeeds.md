@@ -37,19 +37,25 @@ Hosting feed data on Github comes with a number of benefits:
 * Private repositories can prevent external entities from accessing your feeds to gain insight into any potential compromise that you may be dealing with, or have dealt with in the past.
 * [Fine-Grained Personal Access Tokens](https://docs.github.com/en/rest/overview/permissions-required-for-fine-grained-personal-access-tokens?apiVersion=2022-11-28) allow for secure authentiation and authorization to specfic Private respositories.
 
+## Secure Acess to your GitHub repository
+
+GitHub does not support basic http authentication to access a private repository.  To support programatic access the preferred method is the use of a Personal Access Token. A PAT provides unfettered access to all repositories in your account. I would recommend in most cases to use a Fine-Grained Personal Access Tokens.  These provide granular access to individual repository.
+
 To create a new fine-grained Personal Access Token, login to your GitHub Account, and then:
 
 1. Click your profile picture from the upper right corner
 2. Click Settings
-3. Scroll to the bottom of the navigation pane on the left and click **<>Developer Settings**
-4. Click **Personal Access Tokens** from the navigation pane
-5. Select **Fine-Grained Tokens**
-6. Click **Generate New Token**
+3. Scroll to the bottom of the navigation pane on the left and click `<>Developer Settings`
+4. Click `Personal Access Tokens` from the navigation pane
+5. Select `Fine-Grained Tokens`
+6. Click `Generate New Token`
+
+Copy the generated token and store it in a safe place.  This will be used in an upcoming section to authenticate the Fortigate 
 
 ### Note:
-Ensure that the Fine-Grained PAT has **Read** access to content and metadata for the repository that will host your Threat Feed Data.
+Ensure that the Fine-Grained PAT has `Read` access to content and metadata for the repository that will host your Threat Feed Data.
 
-## Configure Fortigate to Authenticate using a Personal Access token (PAT)
+## Configure Fortigate to Authenticate using The Fine-Grained Personal Access token (PAT)
 
 As Mentioned above the Fortigate only supports Basic Authentication when connecting to a an external threat feed. The key to this is to configure the fortigate to pass the "Authorization" header along with the PAT.  This can be done via the FortiOS CLI.
 
@@ -73,14 +79,24 @@ config system external-resource
     next
 end
 ```
-Set the resource equal to the URL of the raw data file in your private GitHub repository. The "Authorization" header can be appended to the user-agent string using \r\n between them as follows
+The source should be set to the raw file url.
+The file link will be in the following format:
+`https://raw.githubusercontent.com/<YOUR_USERNAME>/<REPO_NAME>/<Branch_NAME>/FILE_NAME.txt`
 
+Set the resource equal to the URL of the raw data file in your private GitHub repository. The "Authorization" header can be appended to the user-agent string using `\r\n` between them as follows
+
+The documentation stated that the default user-agent string is `curl/7.58.0`
+
+If the PAT generated is equal to `github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK` you would set the user-agent to:
+`"curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"`
+
+**Sample Configuration**
 ```console
 config system external-resource
     edit "Malicious_Domains"
         set type=domain
         set resource = "https://raw.githubusercontent.com/GitHubAcct/ThreatFeeds/main/Domains.txt"
-        set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdfasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
+        set user-agent "curl/7.58.0\r\nAuthorization: token github_pat_11N0TR3A1h576ekyM_xQqR6XlNOASDFsdasdgjn3w3B0Gu5K3y5wYLblX8b7R25DPVL9ZsH51AK"
     next
 end
 ```

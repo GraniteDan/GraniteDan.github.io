@@ -85,4 +85,5 @@ config system external-resource
 end
 ```
 
-> I hope to put together a quick tutorial video and adding it to my [YouTube Channel](https://youtube.com/granitedan) soon.  Once this is done I will add a link here as well.{: .prompt-info}
+> I hope to put together a quick tutorial video and adding it to my [YouTube Channel](https://youtube.com/granitedan) soon.  Once this is done I will add a link here as well. 
+{: .prompt-info }

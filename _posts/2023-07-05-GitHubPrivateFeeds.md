@@ -103,6 +103,17 @@ config system external-resource
     next
 end
 ```
+## Closing
+The fortigate will perform a regular download based on the `refresh-rate` configured (Default 5 min). Objects ingested are accessed via firewall policies and security profiles
+
+| Feed Type                    | Fortigate Object | Accessed Via |
+|:-----------------------------|:-----------------|-------------:|
+| Category | Web Filter Category (Remote Category) | Web Filter Profile |
+| Address      | Address Group Object | Firewall Policy |
+| Domain | DNS Category (Remote Category) | DNS Profile |
+| Malware | External malware block list | Enable in AV Profile   |
+
+Confgure security profiles or firewall policies to block the objects ingested from threat feeds. It is important to ensure global block policies are at the top of the Firewall policy list to ensure that all addresses in the feeds are blocked before any other policy allows the traffic.
 
 > I hope to put together a quick tutorial video and adding it to my [YouTube Channel](https://youtube.com/granitedan) soon.  Once this is done I will add a link here as well. 
 {: .prompt-info }

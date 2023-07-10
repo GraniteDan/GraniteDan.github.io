@@ -1,6 +1,6 @@
 ---
 title: FortiGate Security Zones vs. Multi-Interface Policies
-date: 2023-07-10 17:30:00 -400
+date: 2023-07-10 17:30:00 -300
 categories: [fortinet,firewallpolicies,networksecurity]
 tags: [zones,fortigate,firewallpolicies] 
 ---

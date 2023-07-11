@@ -5,7 +5,6 @@ categories: [fortinet,firewallpolicies,networksecurity]
 tags: [zones,fortigate,firewallpolicies] 
 ---
 
-# FortiGate Security Zones vs. Multi-Interface Policies
 Often times, when posting information, screenshots or answers to questions on forums, or social media sites. I have gotten negative feedback from people when they notice that I have Multi-Interface policies enabled, and in use. The reaction is usually in the form of a bold statement, and rarely in the form of a question.  So in the wise words of Ted Lasso... ["Be curious, not judgmental"](https://www.youtube.com/watch?v=oZ4YSXv6Xkg)
 
 This article will examine the pro's and con's of configuring the Security Zones, and Multi-interface Policies.  And why I believe that they are both valuable in the right circumstances.
